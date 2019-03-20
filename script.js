@@ -94,6 +94,7 @@ document.addEventListener("DOMContentLoaded", function(){
     let startScreen = document.getElementById("startScreen");
     let selection = document.getElementById("selection");
     selection.addEventListener("submit", function() {
+        event.preventDefault();
         for(let i = 0; i < selection.length; i++) {
             if(selection[i].checked) {
                 difficulty = selection[i].id;
