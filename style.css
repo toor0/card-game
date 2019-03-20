@@ -1,0 +1,113 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+body {
+  margin: 20px 0;
+  font-family: 'Baloo Chettan', cursive;
+}
+
+#startScreen {
+  display: block;
+  margin-top: 25px;
+  margin-left: 35%;
+  margin-right: 35%;
+  padding-bottom: 50px;
+  text-align: center;
+  border-color: rgb(1, 107, 84);
+  border-style: solid;
+  border-radius: 5px;
+  position: relative;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  
+}
+
+#selection {
+  margin-top: 100px;
+}
+
+input[type=submit] {
+  width: 250px;
+  background-color: #00B9BC;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: 'Baloo Chettan', cursive;
+}
+
+.scoreboard {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  font-size: 36px;
+  margin-right: 25px;
+  text-align: right;
+  position: relative;
+
+}
+
+.grid {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  perspective: 1000px;
+
+}
+
+.card {
+  margin: 5px;
+  transform: scale(1);
+  transform-style: preserve-3d;
+  transition: transform .5s;
+}
+
+.card,
+.back,
+.front {
+  height: 150px;
+  width: 100px;
+}
+
+.back {
+  background: url('img/hearth.png') no-repeat center center / contain;
+  z-index: 2;
+}
+
+.front {
+  transform: rotateY(180deg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  border: 3px;
+  border-style: solid;
+  border-color: black;
+  border-radius: 4px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  z-index: 0;
+}
+
+.back,
+.front {
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.selected {
+  transform: rotateY(180deg);
+}
+
+.match {
+  transform: rotateY(180deg);
+}
+
+
+
